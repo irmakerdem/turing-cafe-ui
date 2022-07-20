@@ -7,12 +7,12 @@ const Reservations = ( {reservations} ) => {
   const reservationsCards = reservations.map(reservation => {
     // console.log(reservation)
     return (
-      <Card 
-        name={reservations.name}
-        date={reservations.date}
-        time={reservations.time}
-        number={reservations.number}
-        key={reservations.id}
+      <Card
+        name={reservation.name}
+        date={reservation.date}
+        time={reservation.time}
+        number={`Number of guests: ${reservation.number}`}
+        key={reservation.id}
       />
     )
   })
