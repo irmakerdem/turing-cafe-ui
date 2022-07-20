@@ -23,8 +23,26 @@ class App extends Component {
       })
   }
 
+  // addReservation = (newReservation) => {
+  //   this.setState({ reservations: [...this.state.reservations, newReservation] });
+  // }
+
   addReservation = (newReservation) => {
-    this.setState({ reservations: [...this.state.reservations, newReservation] });
+    fetch('http://localhost:3001/api/v1/reservations', {
+      method: 'POST',
+      body: JSON.stringify({
+        "name": newReservation.name,
+        "date": newReservation.date,
+        "time": newReservation.time,
+        "number": newReservation.number,
+        "id": newReservation.id
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => response.json())
+      .then(() => this.setState({ reservations: [...this.state.reservations, newReservation] }))
   }
 
   render() {
