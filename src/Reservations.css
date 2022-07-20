@@ -1,4 +1,4 @@
-.reservationsCards {
+.reservations-cards {
   box-sizing: border-box;
   border: 3px solid #1e8080;
   padding: 10px;
@@ -17,3 +17,5 @@
 }
 
 /* need to change display to flex/grid */
+
+/* id is cameCase while classes are kebab */

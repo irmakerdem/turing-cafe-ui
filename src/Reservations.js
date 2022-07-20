@@ -7,7 +7,7 @@ const Reservations = ( {reservations} ) => {
   const reservationsCards = reservations.map(reservation => {
     // console.log(typeof reservation.number)
     return (
-      <div className='reservationsCards'>
+      <div className='reservations-cards'>
         <Card
           name={reservation.name}
           date={reservation.date}
