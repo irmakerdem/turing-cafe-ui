@@ -9,6 +9,18 @@ class App extends Component {
     }
   }
 
+  componentDidMount = () => {
+    fetch('http://localhost:3001/api/v1/reservations')
+      .then(response => {
+        console.log(response)
+        return response.json()
+      })
+      .then(data => {
+        console.log(data)
+        this.setState( {reservations: data} )
+      })
+  }
+
   render() {
     return (
       <div className="App">
