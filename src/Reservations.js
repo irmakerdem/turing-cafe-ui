@@ -5,7 +5,7 @@ import './Reservations.css';
 const Reservations = ( {reservations} ) => {
 
   const reservationsCards = reservations.map(reservation => {
-    console.log(typeof reservation.number)
+    // console.log(typeof reservation.number)
     return (
       <div className='reservationsCards'>
         <Card
@@ -16,7 +16,7 @@ const Reservations = ( {reservations} ) => {
           number={`Number of guests: ${reservation.number}`}
           key={reservation.id}
         />
-        <button>Cancel</button>
+        <button className='cancel-button'>Cancel</button>
       </div>
     )
   })
