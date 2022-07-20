@@ -34,7 +34,7 @@ class App extends Component {
         "name": newReservation.name,
         "date": newReservation.date,
         "time": newReservation.time,
-        "number": newReservation.number,
+        "number": Number(newReservation.number),
         "id": newReservation.id
       }),
       headers: {
