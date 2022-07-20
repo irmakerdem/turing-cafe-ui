@@ -13,12 +13,15 @@ describe('Turing Cafe Reservations', () => {
 
   it('Should be able to update form based on user input', () => {
     // Write a test that checks that when data is put into the form, the value is reflected in that form input.
-    
+    cy.get('[placeholder="Name"]').type('Irmak')
+    cy.get('[placeholder="Date (mm/dd)"]').type('07/20')
+    cy.get('[placeholder="Number of guests"]').type('5')
+    cy.get('[type="number"]').type(2)
   });
 
-  it('Should be able to display new reservation on page', () => {
+  it.only('Should be able to display new reservation on page', () => {
     // Write a test to check the user flow of adding a new reservation to the page.
-    
+
   });
 
 })
